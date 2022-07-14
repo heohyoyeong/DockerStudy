@@ -1,42 +1,43 @@
-# Docker 설치 방법
+# Docker 명령어
 
 <hr/>
-- https://www.docker.com/ 에 접속하여 우측 상단의 GetStarted 버튼을 클릭후 다운로드 시작
+- 도커를 성공적으로 설치한 후 CMD 창을 켜서 각종 커맨드를 입력해보자
+- 가장 기본적인 커맨드인 docker를 입력하면 다음과 같은 각종 커맨드와 옵션들이 나옵니다.
+<left><img src="Basic_Docker_1.png" width="500" height="500"></left><right><img src="Basic_Docker_2.png" width="500" height="500"></right>
 
-<center><img src="1_get Strarted.png" width="1000" height="200"></center>
-- 다운로드한 Docker를 설치하면서 회원가입 진행하며 설치가 완료되면 컴퓨터 재시작 진행
-- 재시작후 재대로 설치되어있는지 확인 -> Terminal에서 Docker version 확인
+- 이중 오른쪽에 있는 Command에 대하여 주로 알아 보겠습니다.
 
-# 만약 안될경우?
+1. Pull (image 다운로드) 
+- docker hub에 존재하는 image를 다운받는 명령어입니다.
+~~~terminal
+docker pull alpine (alpine이라는 image를 docker hub에서 다운로드)
+~~~
 
-<hr/>
+2. images  (현재 가지고 있는 image들의 목록 확인) 
+- 1번 명령어를 사용하여 alpine이라는 image를 다운로드 받았으니 제대로 받았는지 확인해봅시다.
+- 현재 유저가 가지고 있는 image들의 목록을 확인하는 명령어 입니다.  
+~~~terminal
+docker images 
+~~~
 
-- 일반적으로 Windows에서 Docker를 진행할 경우 2가지 문제일 가능성이 있습니다.
-1. **가상화 기능 활성화 유무**
-2. **Hyper-V 옵션 활성화 유무**
+3. run  (이미지를 사용하여 컨테이너를 생성하고 컨테이너에 접속) 
+- run의 명령어는 기본적으로  docker run 옵션 이미지 명령어 ... 진행이 됩니다.
 
+- 예를들어 **docker run alpine** 이라고 터미널에 작성하면  alpine 이미지로 컨테이너를 생성후 바로 끝날 겁니다.
 
-# 가상화 기능 켜기
+- 이러한 run을 구동하기 위하여 필요한 옵션들을 먼저 알아봅시다.
 
-<hr/>
-
-- 자신의 PC의 기상화 기능이 켜져있는지 확인 하기위해서는 작업관리자를 켜고 아래를 확인하면됩니다.
-<center><img src="2_가상화 확인.png" width="400" height="400"></center>
-
-- 만약 이러한 **가상화가 꺼져**있다면 컴퓨터 시작시  F12 or Del or F1등으로 접속할수있는 **BIOS화면**에서 수정이 가능합니다.
-- 또한 사용하고있는 CPU에 따라 BIOS 화면이 다르기 때문에 사전에 확인해야한다.
-- ASUS는 Intel Virtualization Technology로 표기하며 AMD는 SVM MODE로 표기하는 것처럼 다르니 조심하자!
-<left><img src="AMD BIOS SVM.png" width="400" height="400"></left>        <rignt><img src="ASUS BIOS SVM.png" width="400" height="400"></right>
+  -  -i (--interactive) : 사용자가 컨테이너에서 입출력이 가능한 상태로 만들어줍니다. 
+  - -t (--tty) : 컨테이너를 가상환경에서 에뮬레이션 하겠다는 의미입니다.
+  - 위의 명령어는 동시에 사용하는 경우가 많아 2개를 합친것이 -it 입니다. 
+  -  -d (--detach) : 컨테이너를 백그라운드에서 실행하겠다는 의미로 프로세스가 종료되도 컨테어너가 종료되지않고 살아있습니다
+  - -p (--publish list) : 컨테이너의 포트를 호스트에 퍼블리쉬하겠다는 의미입니다. (ex -p 80:80 포트포워딩을 생각하시면됩니다.)
+  - 더 많은 옵션들이 있지만 추후에 더 알아보도록 하겠습니다. 궁금하면 **docker run --help**를 입력하시면 나옵니다.
 
 
 
-# Hyper-V 기능 켜기
-
-<hr/>
-
-- Hyper-V의 경우, 해당 사이트를 참조하는 것이 좋을듯하다. https://windowsreport.com/hyper-v-and-containers-not-enabled/
-- 위 사이트의 내용을 요약하면 시도할 것은 총 2가지 입니다.
-1. **Windows 기능에서 Hyper-V가 켜져있는지 확인하기**
-2. **Windows PowerShell로 Hyper-V삭제 후 재설치**
-
+~~~terminal
+docker run -p 3000:3000 -it alpine (localhost 3000포트에 퍼블리쉬하며 입출력형태로 컨테이너를 실행시키겠다)
+docker run -p 4000:4000 -d alpine (localhost 4000포트에 퍼블리쉬하며 백그라운드에 출력시키겠다.)
+~~~
 
