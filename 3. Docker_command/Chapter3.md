@@ -3,7 +3,7 @@
 <hr/>
 - 도커를 성공적으로 설치한 후 CMD 창을 켜서 각종 커맨드를 입력해보자
 - 가장 기본적인 커맨드인 docker를 입력하면 다음과 같은 각종 커맨드와 옵션들이 나옵니다.
-<left><img src="Basic_Docker_1.png" width="500" height="500"></left><right><img src="Basic_Docker_2.png" width="500" height="500"></right>
+<left><img src="Basic_Docker_1.PNG" width="500" height="500"></left><right><img src="Basic_Docker_2.PNG" width="500" height="500"></right>
 
 - 이중 오른쪽에 있는 Command에 대하여 주로 알아 보겠습니다.
 
