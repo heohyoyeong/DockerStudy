@@ -41,3 +41,25 @@ docker run -p 3000:3000 -it alpine (localhost 3000포트에 퍼블리쉬하며 �
 docker run -p 4000:4000 -d alpine (localhost 4000포트에 퍼블리쉬하며 백그라운드에 출력시키겠다.)
 ~~~
 
+4. ps  (컨테이너 확인) 
+- 현재 작동되고 있거나 작동되었던 컨테이너에 대한 목록을 보여줍니다.
+
+~~~terminal
+docker ps (현재 작동되고 있는 컨테이너에 대한 목록을 보여줘!)
+docker ps -a (이전에 종료되었던 컨테이너 까지 싹다 보여줘!)
+~~~
+
+5. stop  (작동중인 컨테이너 종료) 
+- 현재 작동되고 있는 컨테이너를 종료합니다
+
+~~~terminal
+docker ps (현재 작동되고 있는 컨테이너에 대한 목록을 보여줘!)
+docker stop "Container id" ("Container id" 컨테이너를 정지)
+~~~
+
+6. rm  (컨테이너 삭제) 
+- 보유하고 있는 컨테이너를 완전히 삭제합니다.
+
+~~~terminal
+docker rm "Container id" ("Container id" 컨테이너를 삭제)
+~~~
