@@ -13,14 +13,14 @@
 <hr/>
 
 ## 1. Docker 란?
-    - [Docker에 대한 기본 설명](https://github.com/heohyoyeong/DockerStudy/tree/main/1.%20What_is_Docker)
+- [Docker에 대한 기본 설명](https://github.com/heohyoyeong/DockerStudy/tree/main/1.%20What_is_Docker)
 ## 2. Docker 설치
-    - [Docker 설치 설명](https://github.com/heohyoyeong/DockerStudy/tree/main/2.%20Install_Docker)
+- [Docker 설치 설명](https://github.com/heohyoyeong/DockerStudy/tree/main/2.%20Install_Docker)
 ## 3. Docker 기본 명령어 정리
-    - [Docker의 기본 명령어 설명](https://github.com/heohyoyeong/DockerStudy/tree/main/3.%20Docker_command)
+- [Docker의 기본 명령어 설명](https://github.com/heohyoyeong/DockerStudy/tree/main/3.%20Docker_command)
 ## 4. Docker volume
-    - [Docker 볼륨이란?](https://github.com/heohyoyeong/DockerStudy/tree/main/4.%20Docker_Volume)
+- [Docker 볼륨이란?](https://github.com/heohyoyeong/DockerStudy/tree/main/4.%20Docker_Volume)
 ## 5. Docker compose
 ## 6. Docker & travis CI & AWS
-    - [Docker Build 부터 AWS 업로드 및 실행까지 한방에](https://github.com/heohyoyeong/docker-fullstack-app)
+- [Docker Build 부터 AWS 업로드 및 실행까지 한방에](https://github.com/heohyoyeong/docker-fullstack-app)
 
