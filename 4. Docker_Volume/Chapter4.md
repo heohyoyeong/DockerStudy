@@ -22,3 +22,6 @@ Docker Volume은 Copy와 다르게 컨테이너의 특정 폴더를 Host에 연�
 
 
 <img src="dockerrunexample.PNG">
+
+- 위 그림에서 보이듯이 -v A:B 일경우, Host의 A와 컨테이너의 B를 연결해준다.
+- 또한 -v C 는 host에서 참조할 폴더는 없고 컨테이너의 C를 참조해줍니다.
