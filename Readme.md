@@ -21,6 +21,7 @@
 ## 4. Docker volume
 - [Docker 볼륨이란?](https://github.com/heohyoyeong/DockerStudy/tree/main/4.%20Docker_Volume)
 ## 5. Docker compose
+- [Docker Compose란?](https://github.com/heohyoyeong/DockerStudy/tree/main/5.%20Docker_Compose)
 ## 6. Docker & travis CI & AWS
 - [Docker Build 부터 AWS 업로드 및 실행까지 한방에](https://github.com/heohyoyeong/docker-fullstack-app)
 
