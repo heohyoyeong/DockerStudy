@@ -5,7 +5,7 @@
 - MLOPS가 되기위해서는 서버에 대하여 알아야 한다.
 - 가장 많이 사용된다고 하는 Docker와 Kubernetes에 대하여 공부가 필요
 - 먼저 Docker에 대한 공부를 시작하고 정리하고자 합니다.
-
+- 자료의 경우, 구글링과 [따라하며 배우는 도커와 CI환경](https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%8F%84%EC%BB%A4-ci/dashboard)를 참조하였습니다.
 </br>
 
 # 목차
