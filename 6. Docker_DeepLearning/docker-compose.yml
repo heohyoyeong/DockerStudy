@@ -1,0 +1,20 @@
+services:
+    train:
+        build:
+            dockerfile: Dockerfile
+            context: ./train
+        volumes:
+            - newvolume:/home
+        stdin_open: true
+
+    inference:
+        build:
+            dockerfile: Dockerfile
+            context: ./inference
+        volumes:
+            - newvolume:/home
+        depends_on:
+            - train
+        stdin_open: true
+volumes:
+    newvolume:
